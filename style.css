@@ -1,0 +1,101 @@
+span {
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 4px;
+    /*background-color: lavender;*/
+}
+
+.logo {
+    font-size: 2rem;
+    color: limegreen;
+    width: 30%;
+    height: 92px;
+    display: inline-block;
+    position: relative;
+}
+
+i {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.formHolder {
+    width: 60%;
+    display: inline-block;
+    padding: 0;
+}
+
+.formside {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.left{
+    margin-right: 1%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.left input:nth-child(4) {
+    background-color: white;
+}
+
+.right {
+    margin-left: 1%;
+}
+
+input, textarea {
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: none;
+    padding: 2px;
+    margin: 2px;
+}
+
+input[type="range"] {
+    width: 75%;
+}
+
+input[name="submit"] {
+    background-color: skyblue;
+    width: 30%;
+    float:right;
+    border-radius: 5px;
+    /*box-sizing: content-box;*/
+}
+
+input[name="submit"]:hover {
+    box-shadow: inset 0 0 5px blue;
+}
+
+input.box {
+    width: 30px;
+    display: inline-block;
+}
+
+
+
+header {
+    background-color: gray;
+    padding: 4px;
+}
+
+body {
+    margin: 0;
+    overflow: scroll;
+}
+
+section {
+    padding: 10px;
+    line-height: 80%;
+    margin: 0 auto;
+    text-align: center;
+}

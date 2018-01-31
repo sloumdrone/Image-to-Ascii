@@ -1,0 +1,237 @@
+body {
+    background-color: #F7F3ED;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.description {
+    font-family: 'Special Elite', cursive;
+}
+
+.box:nth-child(even) {
+    width: 800px;
+    position: relative;
+    margin: 5px auto;
+    display: block;
+    padding: 10px 10px;
+    border-top: 2px solid #6E8898;
+    border-bottom: 2px solid #6E8898;
+    text-align: center;
+    color: #2E5266;
+    background-color: rgba(226,192,68,0.2);
+}
+
+.box:nth-child(odd) {
+    width: 800px;
+    position: relative;
+    margin: 5px auto;
+    display: block;
+    padding: 10px 10px;
+    border-left: 2px solid #6E8898;
+    border-right: 2px solid #6E8898;
+    text-align: center;
+    color: #2E5266;
+    background-color: rgba(68,192,226,0.15);
+}
+
+header.box h1 {
+    /* background-image: url('./imagetoascii.png'); */
+    /* background-repeat: repeat; */
+    /* filter: invert(0.7); */
+    /* width: 300px; */
+    padding: 0;
+    font-family: 'Special Elite', cursive;
+    user-select: none;
+}
+
+.box:nth-child(even) .num {
+    background-color: #6E8898;
+    color: #F7F3ED;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* padding: 3px; */
+}
+
+.box:nth-child(odd) .num {
+    background-color: #6E8898;
+    color: #F7F3ED;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 2px solid #6E8898;
+    /* padding: 3px; */
+}
+
+.help {
+    /* width: 2rem;
+    height: 2rem;
+    border: 2px solid #6E8898; */
+    color: black;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+    /* border-radius: 100%;
+    background-color: blue; */
+}
+
+.help span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -22px;
+    left: -475px;
+    width: 450px;
+    height: 100px;
+    background-color: #fbcfcf;
+    border-left: 3px solid #6E8898;
+    border-right: 3px solid #6E8898;
+    z-index: 50;
+    box-shadow: 5px 5px 20px black;
+    color: #2e5266;
+    padding: 4px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.85rem;
+    line-height: 1.75;
+}
+
+.help:hover .tooltip {
+    display: block;
+}
+
+.box:nth-child(odd) .section-title {
+    font-family: 'Special Elite', cursive;
+    background-color: white;
+    height: 1rem;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    display: inline-block;
+    border-right: 2px solid #6E8898;
+    border-bottom: 2px solid #6E8898;
+    border-top: 2px solid #6E8898;
+    padding: 3px;
+}
+
+.box:nth-child(even) .section-title {
+    font-family: 'Special Elite', cursive;
+    background-color: white;
+    height: 1rem;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    display: inline-block;
+    border-right: 2px solid #6E8898;
+    border-bottom: 2px solid #6E8898;
+    padding: 3px;
+}
+
+#slider {
+    width: 50%;
+}
+
+
+input[type="file"] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.label {
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: darkred;
+    border: 1px solid black;
+}
+
+input[type="file"] + label, #submit {
+    color: #2E5266;
+    background-color: #9FB1BC;
+    display: inline-block;
+    border: 1px solid #6E8898;
+    margin: 10px auto;
+    padding: 5px 8px;
+    font-size: 1rem;
+}
+
+.text-entry {
+    color: #2E5266;
+    width: 50%;
+    background-color: #F7F3ED;
+    display: inline-block;
+    border: 1px solid #6E8898;
+    margin: 10px auto;
+    padding: 10px 20px;
+}
+
+.text-entry::placeholder {
+    color: #6E8898;
+}
+
+/* input[type="file"]:focus + label, */
+input[type="file"] + label:hover, #submit:hover {
+    color: #F7F3ED;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+select {
+    -webkit-appearance: button;
+    border-radius: 0px;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    user-select: none;
+    cursor: pointer;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #6E8898;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+
+input[type=checkbox] {
+  margin-left: 20px;
+}
+
+
+h3 {
+    display: inline-block;
+}
