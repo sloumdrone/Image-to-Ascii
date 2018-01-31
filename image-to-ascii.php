@@ -141,14 +141,14 @@
                         //handle grayscale conversion
                         if (isset($_POST['colorascii']) && $_POST['colorascii'] === 'c'){
                             $colorChar = renderGrayscale($averageR,$averageG,$averageB);
-                            $imagestring .= "<span style=\"color:rgb($averageR,$averageG,$averageB)\">$colorChar</span>";
+                            $imagestring .= "<span style=\"color:rgb($averageR,$averageG,$averageB);font-family: monospace;font-size: 0.9rem;font-weight: bold;display: inline-block;letter-spacing: 4px;\">$colorChar</span>";
                         } else {
                             $grayChar = renderGrayscale($averageR,$averageG,$averageB);
-                            $imagestring .= "<span>$grayChar</span>";
+                            $imagestring .= "<span style=\"font-family: monospace;font-size:0.9rem;font-weight:bold;display:inline-block;letter-spacing:4px;\">$grayChar</span>";
                         }
 
                     } else {
-                        $imagestring .= "<span style=\"color:rgb($averageR,$averageG,$averageB)\">{$wordArray[$currentPos]}</span>";
+                        $imagestring .= "<span style=\"color:rgb($averageR,$averageG,$averageB);\">{$wordArray[$currentPos]}</span>";
 
 
                         if (++$currentPos === count($wordArray)){
@@ -158,6 +158,12 @@
                 }
                 $imagestring .= "<br />";
             }
+            ?>
+                <script type="text/javascript">
+                    const output = document.querySelector('textarea');
+                    output.innerHTML = "<?php print htmlentities($imagestring) ?>";
+                </script>
+            <?php
             print($imagestring);
         } else {
             if ($errorversion){

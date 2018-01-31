@@ -1,35 +1,33 @@
 <header>
-    <div class="logo">
-        <i>Image to ASCII!</i>
-    </div>
-    <div class="formHolder">
-        <form class="inputForm" action="index.php" method="post" enctype="multipart/form-data">
-            <div class="formside left">
-                <input type="text" name="imageURL" placeholder="Image URL" value="" class="half"><br />
-                or
-                <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
-                <input name="userfile" type="file" class="half" /><br />
+    <div class="mainBody" style="top: -100px; position: absolute;">
+        <a href="./index.php">
+            <div id="back">
+                <span><< Back</span>
             </div>
-            <div class="formside right">
-                <input type="range" name="blockSize" value="12" min="1" max="40" id="slider">
-                <span id="range-val">12</span>
-                <script type="text/javascript">
-                    var slider = document.getElementById('slider');
-                    var rangeValue = document.getElementById('range-val');
-                    slider.addEventListener('change', function(){
-                        rangeValue.textContent = this.value;
-                    })
-                </script>
-                <br />
-                <textarea name="textInput" rows="1" cols="80" placeholder="Text to display (Optional)"></textarea><br />
-                ASCII? <input type="checkbox" name="ascii" value="Yes" class="box" />
-                <select name="colorascii">
-                    <option value="">-</option>
-                    <option value="c">Color</option>
-                    <option value="m">Mono</option>
-                </select>
-                <input type="submit" name="submit" value="submit">
-            </div>
-        </form>
+        </a>
+        <div id="htmloutput">
+            <textarea name="output" ></textarea>
+        </div>
+        <div class="textcontent">
+            <p>To use color output on your own page, copy it from the field to the left.</p>
+        </div>
+        <div id="pulldown">+</div>
     </div>
+    <script type="text/javascript">
+        const pulldown = document.getElementById('pulldown');
+        const main = document.querySelector('.mainBody');
+        console.log(main.style.top);
+        pulldown.addEventListener('click',function(){
+            console.log(main.style.top);
+            if (main.style.top === '0px'){
+                main.style.top = '-100px';
+                main.style.position = 'absolute'
+                pulldown.innerText = '+'
+            } else {
+                main.style.top = '0px';
+                main.style.position = 'relative';
+                pulldown.innerText = '-'
+            }
+        });
+    </script>
 </header>
