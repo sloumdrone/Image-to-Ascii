@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title></title>
         <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./resources/main.css">
     </head>
     <body>
         <form class="inputForm" action="output.php" method="post" enctype="multipart/form-data">

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Image to Text</title>
         <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="./resources/output.css">
     </head>
     <body>
         <?php
