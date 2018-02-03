@@ -16,3 +16,5 @@ This project uses PHP, JavaScript, HTML, and CSS. Image to Ascii can be drag and
  1. If you enable ascii mode, the output will use different ascii characters to shade the output image
  1. Ascii mode can output in color or monochrome (default)
  1. If output mode is disabled and a user does not input optional text for output, then colored blocks will be used to provide a mosaic look
+
+The output page will show the ascii image. While a user can select all of the ascii text output and paste it elsewhere, the color will not go with it (mono ascii will be the only mode where that is useful). As a result a box has been provided at the top with html output that can be copied and pasted into another website or other document. It will lack the css styling that provides additional line spacing to make things appear correctly. If you are using the html output on your own page: use a monospace font.
